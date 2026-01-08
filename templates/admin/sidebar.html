@@ -1,0 +1,46 @@
+{{define "sidebar"}}
+<aside class="admin-sidebar">
+    <div class="sidebar-header p-3">
+        <h4>管理后台</h4>
+    </div>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link text-white {{if eq .current "dashboard"}}active{{end}}" href="/admin">
+            <i class="fas fa-dashboard me-2"></i>仪表板
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white {{if eq .current "users"}}active{{end}}" href="/admin/users">
+            <i class="fas fa-users me-2"></i>用户管理
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="/admin/posts">
+                <i class="fas fa-file-alt me-2"></i>文章管理
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="/admin/products">
+                <i class="fas fa-shopping-cart me-2"></i>商品管理
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="/admin/settings">
+                <i class="fas fa-cog me-2"></i>系统设置
+            </a>
+        </li>
+    </ul>
+
+    <!-- 分隔线 -->
+    <hr class="bg-light mx-3">
+
+    <!-- 快捷操作 -->
+    <div class="p-3">
+        <h6 class="text-muted">快捷操作</h6>
+        <div class="d-grid gap-2">
+            <button class="btn btn-sm btn-outline-light">添加用户</button>
+            <button class="btn btn-sm btn-outline-light">生成报表</button>
+        </div>
+    </div>
+</aside>
+{{end}}

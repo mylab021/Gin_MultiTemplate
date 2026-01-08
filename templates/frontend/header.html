@@ -1,0 +1,33 @@
+{{define "header"}}
+<header class="bg-dark text-white py-3">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">我的网站</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {{if eq .title "首页"}}active{{end}}" href="/">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{if eq .title "关于我们"}}active{{end}}" href="/about">关于我们</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products">产品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">联系我们</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+{{end}}

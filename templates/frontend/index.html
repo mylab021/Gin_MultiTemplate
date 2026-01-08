@@ -1,0 +1,140 @@
+{{define "content"}}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="hero-section text-center py-5 mb-5">
+        <h1 class="display-4 fw-bold">欢迎使用 Gin MultiTemplate</h1>
+        <p class="lead">这是一个完整的多模板示例应用</p>
+        <div class="mt-4">
+            <a href="/admin" class="btn btn-primary btn-lg me-2">进入后台</a>
+            <a href="/about" class="btn btn-outline-secondary btn-lg">了解更多</a>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">多模板支持</h3>
+                    <p class="card-text">使用 Gin MultiTemplate 实现不同布局的前台、后台、登录页面。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">响应式设计</h3>
+                    <p class="card-text">使用 Bootstrap 5 构建完全响应式的用户界面。</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">完整的示例</h3>
+                    <p class="card-text">包含登录、注册、用户管理、仪表板等完整功能。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>主要功能</h2>
+            <ul>
+                <li><strong>前台页面</strong>: 面向用户的展示页面</li>
+                <li><strong>后台管理</strong>: 管理员专用的管理界面</li>
+                <li><strong>用户认证</strong>: 登录、注册、密码找回</li>
+                <li><strong>响应式布局</strong>: 适配手机、平板、桌面设备</li>
+                <li><strong>表单验证</strong>: 前后端完整的表单验证</li>
+            </ul>
+
+            <h3 class="mt-4">技术栈</h3>
+            <div class="row">
+                <div class="col-6 col-md-3 text-center mb-3">
+                    <div class="p-3 border rounded">
+                        <h5>Golang</h5>
+                        <small>后端语言</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 text-center mb-3">
+                    <div class="p-3 border rounded">
+                        <h5>Gin</h5>
+                        <small>Web框架</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 text-center mb-3">
+                    <div class="p-3 border rounded">
+                        <h5>Bootstrap 5</h5>
+                        <small>前端框架</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 text-center mb-3">
+                    <div class="p-3 border rounded">
+                        <h5>MultiTemplate</h5>
+                        <small>多模板引擎</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>快速访问</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="/" class="list-group-item list-group-item-action">首页</a>
+                        <a href="/about" class="list-group-item list-group-item-action">关于我们</a>
+                        <a href="/admin" class="list-group-item list-group-item-action">管理后台</a>
+                        <a href="/admin/users" class="list-group-item list-group-item-action">用户管理</a>
+                        <a href="/login" class="list-group-item list-group-item-action">用户登录</a>
+                        <a href="/register" class="list-group-item list-group-item-action">用户注册</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5>测试账户</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>用户名:</strong> admin</p>
+                    <p><strong>密码:</strong> 123456</p>
+                    <p class="text-muted small">这是一个演示账户，请勿在生产环境中使用</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Activity -->
+    <div class="mt-5">
+        <h2>最新动态</h2>
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">系统更新</h5>
+                    <small>2024-01-07</small>
+                </div>
+                <p class="mb-1">完成了多模板系统的完整示例。</p>
+            </div>
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">功能增强</h5>
+                    <small>2024-01-06</small>
+                </div>
+                <p class="mb-1">添加了用户管理功能。</p>
+            </div>
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">界面优化</h5>
+                    <small>2024-01-05</small>
+                </div>
+                <p class="mb-1">改进了响应式设计。</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

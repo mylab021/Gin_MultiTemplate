@@ -1,0 +1,138 @@
+{{define "content"}}
+<div class="dashboard">
+    <h1 class="mb-4">{{.title}}</h1>
+
+    <!-- 统计卡片 -->
+    <div class="row mb-4">
+        <div class="col-md-3 col-6">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">用户数</h5>
+                    <h2 class="display-6">1,234</h2>
+                    <p class="card-text">今日新增: 12</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">订单数</h5>
+                    <h2 class="display-6">567</h2>
+                    <p class="card-text">今日新增: 8</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h5 class="card-title">访问量</h5>
+                    <h2 class="display-6">8,901</h2>
+                    <p class="card-text">在线用户: 23</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">收入</h5>
+                    <h2 class="display-6">¥12,345</h2>
+                    <p class="card-text">今日收入: ¥1,234</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 图表区域 -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>访问趋势</h5>
+                </div>
+                <div class="card-body">
+                    <div id="chart-container" style="height: 300px;">
+                        <p class="text-center py-5">这里应该有一个图表</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>用户来源</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">搜索引擎: 45%</li>
+                        <li class="mb-2">直接访问: 25%</li>
+                        <li class="mb-2">社交媒体: 20%</li>
+                        <li class="mb-2">其他来源: 10%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最新活动 -->
+    <div class="card">
+        <div class="card-header">
+            <h5>最新活动</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>用户</th>
+                        <th>操作</th>
+                        <th>详情</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2024-01-07 10:30</td>
+                        <td>张三</td>
+                        <td>登录</td>
+                        <td>从IP: 192.168.1.1登录</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-07 09:15</td>
+                        <td>李四</td>
+                        <td>下单</td>
+                        <td>订单号: ORD20240107001</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-07 08:45</td>
+                        <td>王五</td>
+                        <td>注册</td>
+                        <td>新用户注册成功</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-06 22:10</td>
+                        <td>赵六</td>
+                        <td>评论</td>
+                        <td>发表了一篇评论</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{define "footer"}}
+<footer class="mt-4 pt-3 border-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-muted">系统版本: 1.0.0 | 最后更新: 2024-01-07</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <p class="text-muted">服务器时间: {{.server_time}}</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{{end}}

@@ -1,0 +1,135 @@
+{{define "content"}}
+<div class="auth-card">
+    <h1 class="auth-title">用户注册</h1>
+
+    {{if .error}}
+    <div class="alert alert-danger" role="alert">
+        {{.error}}
+    </div>
+    {{end}}
+
+    <form action="/register" method="POST">
+        <div class="mb-3">
+            <label for="username" class="form-label">用户名</label>
+            <input type="text"
+                   class="form-control {{if .errors.username}}is-invalid{{end}}"
+                   id="username"
+                   name="username"
+                   value="{{.form.username}}"
+                   placeholder="请输入用户名"
+                   required>
+            {{if .errors.username}}
+            <div class="invalid-feedback">
+                {{.errors.username}}
+            </div>
+            {{end}}
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">邮箱</label>
+            <input type="email"
+                   class="form-control {{if .errors.email}}is-invalid{{end}}"
+                   id="email"
+                   name="email"
+                   value="{{.form.email}}"
+                   placeholder="请输入邮箱"
+                   required>
+            {{if .errors.email}}
+            <div class="invalid-feedback">
+                {{.errors.email}}
+            </div>
+            {{end}}
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">密码</label>
+            <input type="password"
+                   class="form-control {{if .errors.password}}is-invalid{{end}}"
+                   id="password"
+                   name="password"
+                   placeholder="请输入密码（至少6位）"
+                   required>
+            {{if .errors.password}}
+            <div class="invalid-feedback">
+                {{.errors.password}}
+            </div>
+            {{end}}
+        </div>
+
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">确认密码</label>
+            <input type="password"
+                   class="form-control {{if .errors.confirm_password}}is-invalid{{end}}"
+                   id="confirm_password"
+                   name="confirm_password"
+                   placeholder="请再次输入密码"
+                   required>
+            {{if .errors.confirm_password}}
+            <div class="invalid-feedback">
+                {{.errors.confirm_password}}
+            </div>
+            {{end}}
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox"
+                   class="form-check-input {{if .errors.agree_terms}}is-invalid{{end}}"
+                   id="agree_terms"
+                   name="agree_terms"
+                   {{if .form.agree_terms}}checked{{end}}
+                   required>
+            <label class="form-check-label" for="agree_terms">
+                我已阅读并同意
+                <a href="/terms" target="_blank" class="text-decoration-none">服务条款</a>
+            </label>
+            {{if .errors.agree_terms}}
+            <div class="invalid-feedback">
+                {{.errors.agree_terms}}
+            </div>
+            {{end}}
+        </div>
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-lg">注册</button>
+        </div>
+    </form>
+
+    <div class="separator my-4">
+        <span class="text-muted">或</span>
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="button" class="btn btn-outline-dark">
+            <i class="fab fa-github me-2"></i>使用 GitHub 注册
+        </button>
+        <button type="button" class="btn btn-outline-primary">
+            <i class="fab fa-weixin me-2"></i>使用微信注册
+        </button>
+    </div>
+
+    <div class="auth-footer">
+        已有账户？ <a href="/login" class="text-decoration-none">立即登录</a>
+    </div>
+</div>
+{{end}}
+
+<style>
+    .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #6c757d;
+    }
+    .separator::before,
+    .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .separator::before {
+        margin-right: 1em;
+    }
+    .separator::after {
+        margin-left: 1em;
+    }
+</style>
